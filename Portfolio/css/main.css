@@ -1,0 +1,342 @@
+:root{
+    --primary-color: #121415;
+    --sub-color: #3f4348;
+    --nav-width: 120px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: Verdana, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    color: #ccc;
+}
+#container{
+    width: calc(100% - var(--nav-width));
+    float: right;
+}
+.row {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 24px;
+}
+
+.web-button{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.web-button:hover {
+    filter: brightness(80%);
+}
+/* Navigation */
+#nav{
+    width: var(--nav-width);
+    height: 100vh;
+    background-color: var(--sub-color);
+    position: fixed;
+    z-index: 1;
+}
+.nav__img{
+    width: 100%;
+}
+.nav__list{
+    margin-top: -5px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.nav__list-item{
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.nav__list-item:hover{
+    background-color: var(--primary-color);
+}
+.nav__list-item-icon{
+    font-size: 3.2rem;
+    padding: 12px;
+}
+.nav__list-item-name{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* Home */
+
+.home__content{
+    text-align: center;
+    margin: 80px 0;
+}
+.home__content h1{
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2px;
+}
+.home__content p{
+    font-size: 1.6rem;
+    margin-top: 40px;
+}
+
+.home__img{
+    width: 100%;
+    filter: brightness(110%);
+}
+
+/* about */
+
+.sub-heading{
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 4rem;
+    letter-spacing: 1px;
+    padding: 28px 0;
+    margin: 28px 0;
+    position: relative;
+}
+.sub-heading::after{
+    content: "";
+    display: block;
+    width: 200px;
+    border-bottom: 1px solid #757575;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.about__introduction p{
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 300;
+    text-align: justify;
+    color: #757575;
+}
+
+h3{
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 3rem;
+    margin: 28px 0;
+}
+.skill-list{
+    list-style: none;
+}
+.skill-list__item-name{
+    color: #727a84;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-weight: 300;
+}
+.skill-list__item-rate{
+    display: block;
+    height: 28px;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 18px 0;
+}
+.skill-list__item-rate-fill{
+    display: block;
+    height: 100%;
+    background-color: var(--sub-color);
+}
+.skill-achieve{
+    display: flex;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 40px 0;
+}
+.skill-achieve__item{
+    width: 25%;
+    background-color: white;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 30px 0;
+}
+.skill-achieve__item-quantity{
+    font-size: 2.4rem;
+    line-height: 3rem;
+}
+.skill-achieve__item-content{
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    line-height: 3rem;
+}
+
+/* Price */
+.price-table{
+    display: flex;
+    justify-content: space-between;
+}
+.price-item{
+    width: 49%;
+    background-color: #dfe2e8;
+    text-align: center;
+    color: var(--primary-color);
+    filter: brightness(70%);
+}
+.price-item:hover{
+    filter: brightness(100%);
+}
+.price-item__heading{
+    font-size: 2.6rem;
+    line-height: 3rem;
+    font-weight: 300;
+    padding: 30px 0;
+    background-color: #3e434b;
+    color: #ccc;
+}
+.price-item__list{
+    list-style: none;
+}
+.price-item__list li{
+    font-size: 1.4rem;
+    padding: 20px 0;
+    border-bottom: 1px solid #3e434b67;
+}
+.price-item__price-number{
+    font-size: 2.8rem;
+    line-height: 3rem;
+    margin-bottom: 18px;
+}
+.price-item__price-text{
+    color: #3e434bab;
+}
+
+.price-item__list .web-button:hover{
+    background-color: var(--sub-color);
+    color: #fff;
+}
+
+/* Reputation */
+
+.reputation-list__item{
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+.reputation-list__item-img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-right: 20px;
+}
+.reputation-list__item-infor{
+    color: #9d9ea2;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.reputation-list__item-charac{
+    margin-bottom: 20px;
+    font-size: 1.7rem;
+}
+.reputation-list__item-charac_name{
+    margin-right: 20px;
+}
+
+/* Photo */
+.photo__container{
+    display: flex;
+    justify-content: space-between;
+}
+.photo__column{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.photo__column-img{
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+/* Contact */
+.contact-infor{
+    list-style: none;
+}
+.contact-infor-item{
+    font-size: 1.5rem;
+    color: #9d9ea2;
+    margin-bottom: 20px;
+}
+.contact-infor-item i{
+    font-size: 3.2rem;
+    color: #ccc;
+    margin-right: 16px;
+    width: 40px;
+    text-align: center;
+}
+
+.contact-form{
+    color: #9d9ea2;
+    margin: 50px 0;
+    font-size: 1.5rem;
+}
+.contact-form p{
+    margin-bottom: 16px;
+}
+
+.contact-form input{
+    width: 100%;
+    line-height: 2rem;
+    padding: 16px 8px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 2px;
+}
+
+.contact-form .web-button{
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+/* Footer */
+#footer{
+    /* margin-left: 120px; */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer__icon{
+    font-size: 2.4rem;
+    color: #9d9ea2;
+}
+.footer__icon i:hover{
+    filter: brightness(80%);
+}
+
+#footer p{
+    font-size: 1.4rem;
+    color: #9d9ea2;
+    padding: 24px 0;
+}
+#footer p a{
+    color: #9d9ea2;
+}
+#footer p a:hover{
+    color: var(--sub-color);
+}
